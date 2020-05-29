@@ -9,7 +9,7 @@
 
 - A working Internet connection
 - The i3 ISO is used and recommended `https://sourceforge.net/projects/arcolinux-community-editions/files/i3/`
-- Configure Pamac manager and enable AUR/Updates
+- Configure Pamac manager and enable AUR/Updates if not already
 - Fully updated/rebooted system
 
 ## How to get it with git
