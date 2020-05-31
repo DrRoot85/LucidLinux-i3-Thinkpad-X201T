@@ -1,7 +1,6 @@
 # LucidLinux - I3 - Zen kernel - Nvidia
 # Arcolinux Based - `https://arcolinux.com/`
-# This is an active repo with ongoing improvements.
-# some things may not be complete but will become.
+# This is an active repo with ongoing improvements, some things may not be complete but will become.
 
 ## Welcome to LucidLinux auto configuration script for ArcoLinux.
 ## Installing and configuring ArcoLinux to an awesome full range desktop well remaining minimal has never been easier!
