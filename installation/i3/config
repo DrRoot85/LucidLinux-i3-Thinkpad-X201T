@@ -44,11 +44,11 @@ workspace 2 output $firstMonitor
 workspace 3 output $firstMonitor
 workspace 4 output $firstMonitor
 workspace 5 output $firstMonitor
-workspace 6 output $secondMonitor
-workspace 7 output $secondMonitor
-workspace 8 output $secondMonitor
-workspace 9 output $secondMonitor
-workspace 10 output $secondMonitor
+workspace 6 output $firstMonitor
+workspace 7 output $firstMonitor
+workspace 8 output $firstMonitor
+workspace 9 output $firstMonitor
+workspace 10 output $firstMonitor
 
 #Switch to workspace 1-10
 bindsym $mod+1 workspace 1
@@ -86,11 +86,14 @@ assign [class="firefox"]                                                        
 assign [class="Spotify|Pavucontrol"]                                                                  → 5
 assign [class="discord"]                                                                              → 6
 assign [class="Hexchat|Riot|TelegramDesktop"]                                                         → 7
-assign [class="qtwebflix|Minitube"]                                                                   → 8
+assign [class="qtws"]                                                                                 → 8
 assign [class="Steam|lutris|playonlinux"]                                                             → 9
-assign [class="Tor Launcher|Tor Browser|VPN Unlimited"]                                               → 10
+assign [class="vysor|Tor Launcher|Tor Browser|VPN Unlimited"]                                         → 10
 
 #Floating or tiled
+for_window [class="Galculator"] floating enable
+for_window [class="onboard"] floating enable
+for_window [class="org.remmina.Remmina"] floating disable
 for_window [class="vysor"] floating enable
 for_window [class="Anydesk"] floating enable
 for_window [class="Droidcam"] floating enable
@@ -120,19 +123,11 @@ for_window [window_role="setup"] floating enable
 
 #Execute
 #Startup Applications
-exec --no-startup-id vysor
-exec --no-startup-id atom
-exec --no-startup-id GitHub Desktop
-exec --no-startup-id Thunar
 exec --no-startup-id obs
 exec --no-startup-id firefox
 exec --no-startup-id spotify
-exec --no-startup-id minitube
-exec --no-startup-id riot-desktop
 exec --no-startup-id discord
-exec --no-startup-id hexchat
 exec --no-startup-id telegram-desktop
-exec --no-startup-id steam
 exec --no-startup-id vpn-unlimited
 exec --no-startup-id unclutter
 exec --no-startup-id nm-applet

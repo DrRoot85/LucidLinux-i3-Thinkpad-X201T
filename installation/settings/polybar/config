@@ -25,9 +25,10 @@ compositing-underline = over
 compositing-border = over
 
 ; Define fallback values used by all module formats
+format-prefix-foreground = #49e8ff
 format-foreground = #ffffff
 format-background = #242424
-format-underline = #0096ff
+format-underline = #49e8ff
 format-overline =
 format-spacing =
 format-padding =
@@ -35,9 +36,10 @@ format-margin =
 format-offset =
 
 [colors]
+  prefix-foreground = #49e8ff
   background = #242424
   foreground = #ffffff
-  underline = #0096ff
+  underline = #49e8ff
   alert = #ff0000
 
 ################################################################################
@@ -123,9 +125,9 @@ module-margin-right = 1
 font-0 = "Hack:size=7;0"
 font-1 = "FontAwesome:size=7;0"
 
-modules-left =appfinder kernel pamac-manager compton
-modules-center =volume previous playpause next spotify backlight
-modules-right = bluetooth uptime weather date
+modules-left =appfinder kernel pamac-manager compton discord obs
+modules-center =voldown volume volup previous playpause next spotify
+modules-right =menu bluetooth onboard redraw clock-calendar weather uptime
 
 ;tray-detached = false
 ;tray-offset-x = 0
@@ -180,7 +182,7 @@ wrapping-scroll = false
 
 ; Set the scroll cycle direction
 ; Default: true
-reverse-scroll = true
+reverse-scroll = false
 
 ; Use fuzzy (partial) matching on labels when assigning
 ; icons to workspaces
@@ -233,7 +235,7 @@ label-focused-padding = 1
 label-unfocused = %icon%
 label-unfocused-padding = 1
 label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.foreground}
+label-unfocused-foreground = ${colors.prefix-foreground}
 label-unfocused-underline = ${colors.underline}
 
 ; visible = Active workspace on unfocused monitor
@@ -256,7 +258,7 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
 ################################################################################
-###############################################################################
+################################################################################
 ############                       MODULES A-Z                      ############
 ################################################################################
 ################################################################################
@@ -265,10 +267,9 @@ format-background = ${colors.background}
 type = internal/fs
 
 ; Mountpoints to display
-mount-0 = /boot/efi
-mount-1 = /var
-mount-2 = /home
-mount-3 = /
+mount-0 = /var
+mount-1 = /home
+mount-2 = /
 
 ; Seconds to sleep between updates
 ; Default: 30
@@ -288,7 +289,7 @@ Additional formatting
 ;   <ramp-capacity>
 format-mounted = <label-mounted> <ramp-capacity>
 format-mounted-prefix = "  "
-format-mounted-prefix-foreground = #738adb
+format-mounted-prefix-foreground = ${colors.prefix-foreground}
 format-mounted-prefix-background = ${colors.background}
 format-mounted-prefix-underline = ${colors.underline}
 
@@ -296,7 +297,7 @@ format-mounted-prefix-underline = ${colors.underline}
 ;   <label-unmounted> (default)
 format-unmounted = <label-unmounted>
 format-unmounted-prefix = "  "
-format-unmounted-prefix-foreground = #738adb
+format-unmounted-prefix-foreground = ${colors.prefix-foreground}
 format-unmounted-prefix-background = ${colors.background}
 format-unmounted-prefix-underline = #ff0000
 
@@ -326,7 +327,7 @@ ramp-capacity-4 = ▅
 ramp-capacity-5 = ▆
 ramp-capacity-6 = ▇
 ramp-capacity-7 = █
-ramp-capacity-foreground = #738adb
+ramp-capacity-foreground = ${colors.prefix-foreground}
 
 ###############################################################################
 
@@ -363,7 +364,7 @@ ramp-4 = ▅
 ramp-5 = ▆
 ramp-6 = ▇
 ramp-7 = █
-ramp-foreground = #738adb
+ramp-foreground = ${colors.prefix-foreground}
 
 ################################################################################
 
@@ -400,7 +401,7 @@ ramp-4 = ▅
 ramp-5 = ▆
 ramp-6 = ▇
 ramp-7 = █
-ramp-foreground = #738adb
+ramp-foreground = ${colors.prefix-foreground}
 
 ################################################################################
 
@@ -437,7 +438,7 @@ ramp-4 = ▅
 ramp-5 = ▆
 ramp-6 = ▇
 ramp-7 = █
-ramp-foreground = #738adb
+ramp-foreground = ${colors.prefix-foreground}
 
 ################################################################################
 
@@ -474,7 +475,7 @@ ramp-4 = ▅
 ramp-5 = ▆
 ramp-6 = ▇
 ramp-7 = █
-ramp-foreground = #738adb
+ramp-foreground = ${colors.prefix-foreground}
 
 ################################################################################
 
@@ -511,7 +512,7 @@ ramp-4 = ▅
 ramp-5 = ▆
 ramp-6 = ▇
 ramp-7 = █
-ramp-foreground = #738adb
+ramp-foreground = ${colors.prefix-foreground}
 
 ################################################################################
 
@@ -523,7 +524,7 @@ interval = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = ""
-format-prefix-foreground = #738adb
+format-prefix-foreground = ${colors.prefix-foreground}
 format-underline = ${colors.underline}
 ; Available tags:
 ;   <label> (default)
@@ -542,19 +543,19 @@ label = %percentage:3%%
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 0
-ramp-coreload-0-foreground = #738adb
+ramp-coreload-0-foreground = ${colors.prefix-foreground}
 ramp-coreload-1 = ▂
 ramp-coreload-1-font = 0
-ramp-coreload-1-foreground = #738adb
+ramp-coreload-1-foreground = ${colors.prefix-foreground}
 ramp-coreload-2 = ▃
 ramp-coreload-2-font = 0
-ramp-coreload-2-foreground = #738adb
+ramp-coreload-2-foreground = ${colors.prefix-foreground}
 ramp-coreload-3 = ▄
 ramp-coreload-3-font = 0
-ramp-coreload-3-foreground = #738adb
+ramp-coreload-3-foreground = ${colors.prefix-foreground}
 ramp-coreload-4 = ▅
 ramp-coreload-4-font = 0
-ramp-coreload-4-foreground = #738adb
+ramp-coreload-4-foreground = ${colors.prefix-foreground}
 ramp-coreload-5 = ▆
 ramp-coreload-5-font = 0
 ramp-coreload-5-foreground = #ff0000
@@ -599,7 +600,7 @@ interval = 1
 ;   <ramp-swap-free>
 format = <label> <ramp-used> <ramp-free>
 format-prefix = " "
-format-prefix-foreground = #738adb
+format-prefix-foreground = ${colors.prefix-foreground}
 format-underline = ${colors.underline}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
@@ -608,7 +609,7 @@ label = %percentage_used%%
 ; Only applies if <bar-used> is used
 bar-used-indicator =
 bar-used-width = 22
-bar-used-foreground-0 = #738adb
+bar-used-foreground-0 = ${colors.prefix-foreground}
 bar-used-foreground-1 = #557755
 bar-used-foreground-2 = #f5a70a
 bar-used-foreground-3 = #ff5555
@@ -625,7 +626,7 @@ ramp-used-4 = ▅
 ramp-used-5 = ▆
 ramp-used-6 = ▇
 ramp-used-7 = █
-ramp-used-foreground = #738adb
+ramp-used-foreground = ${colors.prefix-foreground}
 
 ; Only applies if <ramp-free> is used
 ramp-free-0 = ▁
@@ -636,7 +637,7 @@ ramp-free-4 = ▅
 ramp-free-5 = ▆
 ramp-free-6 = ▇
 ramp-free-7 = █
-ramp-free-foreground = #738adb
+ramp-free-foreground = ${colors.prefix-foreground}
 
 ################################################################################
 
@@ -668,20 +669,20 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = #738adb
+ramp-capacity-foreground = ${colors.prefix-foreground}
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = #738adb
+animation-charging-foreground = ${colors.prefix-foreground}
 animation-charging-framerate = 750
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-3 = 
 animation-discharging-4 = 
-animation-discharging-foreground = #738adb
+animation-discharging-foreground = ${colors.prefix-foreground}
 animation-discharging-framerate = 500
 
 ################################################################################
@@ -697,7 +698,7 @@ label = %output:10%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "
-format-prefix-foreground = #738adb
+format-prefix-foreground = ${colors.prefix-foreground}
 format-underline = ${colors.underline}
 
 ################################################################################
@@ -711,7 +712,7 @@ format-background = ${colors.background}
 format-underline = ${colors.underline}
 label = %output%
 format-prefix = " "
-format-prefix-foreground = #738adb
+format-prefix-foreground = ${colors.prefix-foreground}
 
 ################################################################################
 
@@ -744,7 +745,7 @@ format-connected = <ramp-signal> <label-connected>
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
 format-connected-prefix = ""
-format-connected-prefix-foreground = #738adb
+format-connected-prefix-foreground = ${colors.prefix-foreground}
 format-connected-prefix-background = ${colors.background}
 format-connected-underline = ${colors.underline}
 
@@ -775,7 +776,7 @@ format-packetloss = <animation-packetloss> <label-connected>
 ;   %linkspeed% [wired]
 
 ; Default: %ifname% %local_ip%
-label-connected =%local_ip% %upspeed% %downspeed%
+label-connected =%local_ip%
 label-connected-foreground = ${colors.foreground}
 
 ; Default: (none)
@@ -795,7 +796,7 @@ ramp-signal-4 = ▅
 ramp-signal-5 = ▆
 ramp-signal-6 = ▇
 ramp-signal-7 = █
-ramp-signal-foreground = #738adb
+ramp-signal-foreground = ${colors.prefix-foreground}
 
 ; Only applies if <animation-packetloss> is used
 animation-packetloss-0 = ⚠
@@ -837,7 +838,7 @@ format-connected = <ramp-signal> <label-connected>
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
 format-connected-prefix = " "
-format-connected-prefix-foreground = #738adb
+format-connected-prefix-foreground = ${colors.prefix-foreground}
 format-connected-prefix-background = ${colors.background}
 format-connected-underline = ${colors.underline}
 
@@ -868,7 +869,7 @@ format-packetloss = <animation-packetloss> <label-connected>
 ;   %linkspeed% [wired]
 
 ; Default: %ifname% %local_ip%
-label-connected =%essid%: %local_ip% %upspeed% %downspeed%
+label-connected =%essid%: %local_ip%
 label-connected-foreground = ${colors.foreground}
 
 ; Default: (none)
@@ -888,7 +889,7 @@ ramp-signal-4 = ▅
 ramp-signal-5 = ▆
 ramp-signal-6 = ▇
 ramp-signal-7 = █
-ramp-signal-foreground = #738adb
+ramp-signal-foreground = ${colors.prefix-foreground}
 
 ; Only applies if <animation-packetloss> is used
 animation-packetloss-0 = ⚠
@@ -909,7 +910,7 @@ click-left = "xfce4-appfinder"
 format-prefix = " "
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix-foreground = #738adb
+format-prefix-foreground = ${colors.prefix-foreground}
 format-underline = ${colors.underline}
 
 ################################################################################
@@ -922,8 +923,8 @@ interval = 1024
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "
-format-prefix-foreground = #738adb
-format-underline = #0084FF
+format-prefix-foreground = ${colors.prefix-foreground}
+format-underline = ${colors.underline}
 
 ################################################################################
 
@@ -935,7 +936,7 @@ label = Pamac U:%output%
 tail = true
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix-foreground = #738adb
+format-prefix-foreground = ${colors.prefix-foreground}
 format-underline = ${colors.underline}
 format-prefix = " "
 click-right = pamac-manager &
@@ -950,27 +951,49 @@ click-left = ~/.config/polybar/scripts/compton-toggle.sh
 interval = 5
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix-foreground = #738adb
+format-prefix-foreground = ${colors.prefix-foreground}
 format-underline = ${colors.underline}
 format-prefix = " "
 label = Compton
 
 ################################################################################
 
+[module/discord]
+type = custom/text
+content = Discord
+content-prefix = " "
+content-background = ${colors.background}
+content-foreground = ${colors.foreground}
+content-prefix-foreground = ${colors.prefix-foreground}
+click-left = i3-msg '[class="discord"] focus'
+
+################################################################################
+
+[module/obs]
+type = custom/text
+content = OBS
+content-prefix = " "
+content-background = ${colors.background}
+content-foreground = ${colors.foreground}
+content-prefix-foreground = ${colors.prefix-foreground}
+click-left = i3-msg '[class="obs"] focus'
+
+################################################################################
+
 [module/volume]
 type = internal/volume
 format-volume = "<label-volume> <bar-volume>"
-label-volume = ""
-label-volume-foreground = #738adb
+label-volume = ""
+label-volume-foreground = ${colors.prefix-foreground}
 label-muted = muted
 bar-volume-width = 10
-bar-volume-foreground-0 = #738adb
-bar-volume-foreground-1 = #738adb
-bar-volume-foreground-2 = #738adb
-bar-volume-foreground-3 = #738adb
-bar-volume-foreground-4 = #738adb
-bar-volume-foreground-5 = #738adb
-bar-volume-foreground-6 = #738adb
+bar-volume-foreground-0 = ${colors.prefix-foreground}
+bar-volume-foreground-1 = ${colors.prefix-foreground}
+bar-volume-foreground-2 = ${colors.prefix-foreground}
+bar-volume-foreground-3 = ${colors.prefix-foreground}
+bar-volume-foreground-4 = ${colors.prefix-foreground}
+bar-volume-foreground-5 = ${colors.prefix-foreground}
+bar-volume-foreground-6 = ${colors.prefix-foreground}
 bar-volume-gradient = false
 bar-volume-indicator = 
 bar-volume-indicator-font = 0
@@ -994,13 +1017,14 @@ format-muted-underline = #ff0000
 type = custom/script
 interval = 86400
 format = "%{T3}<label>"
-format-padding = 3
+format-padding = 2
 ; Previous song icon
 exec = echo ""
 
 ; Check if spotify is running before displaying the icon
 exec-if = "pgrep spotify"
 format-underline = ${colors.underline}
+format-foreground=${colors.prefix-foreground}
 line-size = 1
 click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 
@@ -1018,6 +1042,7 @@ hook-1 = echo ""
 hook-2 = echo ""
 initial = 1
 format-underline = ${colors.underline}
+format-foreground=${colors.prefix-foreground}
 line-size = 1
 click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 
@@ -1027,13 +1052,14 @@ click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org
 type = custom/script
 interval = 86400
 format = "%{T3}<label>"
-format-padding = 3
+format-padding = 2
 ; Next song icon
 exec = echo ""
 
 ; Check if spotify is running before displaying the icon
 exec-if = "pgrep spotify"
 format-underline = ${colors.underline}
+format-foreground=${colors.prefix-foreground}
 line-size = 1
 click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
@@ -1044,39 +1070,21 @@ type = custom/ipc
 hook-0 = echo ""
 hook-1 = python3 ~/.config/polybar/scripts/spotify_status.py
 initial = 1
-format-padding = 3
+format-padding = 2
 format-underline = ${colors.underline}
 line-size = 1
 click-left = i3-msg '[class="Spotify"] focus'
 
 ###############################################################################
 
-[module/backlight]
-type = internal/backlight
-; Use the following command to list available cards:
-; $ ls -1 /sys/class/backlight/
-card = acpi_video0
-format = <bar>
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.background}
-format-prefix-underline = ${colors.underline}
-format-underline = ${colors.underline}
-label = %percentage%%
-bar-width = 10
-bar-indicator = 
-bar-indicator-foreground = ${colors.foreground}
-bar-indicator-font = 0
-bar-fill = 
-bar-fill-font = 0
-bar-fill-foreground = #738adb
-bar-empty = 
-bar-empty-font = 0
-bar-empty-foreground = ${colors.foreground}
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
+[module/onboard]
+type=custom/text
+content= ""
+content-padding = 2
+content-foreground =${colors.prefix-foreground}
+click-left= dbus-send --type=method_call --print-reply --dest=org.onboard.Onboard /org/onboard/Onboard/Keyboard org.onboard.Onboard.Keyboard.ToggleVisible
 
-################################################################################
+###############################################################################
 
 [module/bluetooth]
 type = custom/script
@@ -1084,10 +1092,18 @@ exec = ~/.config/polybar/scripts/bluetooth.sh
 interval = 2
 click-left = exec ~/.config/polybar/scripts/toggle_bluetooth.sh
 click-right = exec blueberry
-format-padding = 3
-format-foreground = ${colors.foreground}
+format-padding = 2
+format-foreground = ${colors.prefix-foreground}
 format-background = ${colors.background}
 format-underline = ${colors.underline}
+
+################################################################################
+
+[module/redraw]
+type=custom/text
+content = "  "
+content-foreground=${colors.prefix-foreground}
+click-left = i3-msg 'restart'
 
 ################################################################################
 
@@ -1099,7 +1115,7 @@ label = Uptime:%output%
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "
-format-prefix-foreground = #738adb
+format-prefix-foreground = ${colors.prefix-foreground}
 format-underline = ${colors.underline}
 
 ################################################################################
@@ -1109,31 +1125,25 @@ type = custom/script
 interval = 10
 format = <label>
 format-prefix = " "
-format-prefix-foreground = #738adb
+format-prefix-foreground = ${colors.prefix-foreground}
 format-underline = ${colors.underline}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 exec = python -u ~/.config/polybar/scripts/weather.py
 tail = true
 
-#################################################################################
+#################################################################
 
-[module/date]
-type = internal/date
-; Seconds to sleep between updates
-interval = 5
-
-; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
-; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %a-%m-%d"
-date-alt = " %m-%d%-%a"
-time = %H:%M
-time-alt = %H:%M
-format-prefix = ""
-format-prefix-foreground = #738adb
+[module/clock-calendar]
+type = custom/script
+exec = /usr/bin/date '+%T %Y-%m-%d'
+interval = 2
+label = %output%
+format-prefix = "  "
+format-prefix-foreground = ${colors.prefix-foreground}
 format-underline = ${colors.underline}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-label = %date% %time%
+click-left = /usr/bin/gsimplecal
 
 #################################################################
