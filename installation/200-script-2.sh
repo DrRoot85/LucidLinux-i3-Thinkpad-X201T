@@ -8,6 +8,27 @@
 #!/bin/bash
 set -e
 
+#intel ucode
+yay -S --noconfirm --needed intel-ucode
+
+  echo "Intel-ucode installed"
+
+#fonts
+yay -S --noconfirm --needed ttf-hack
+
+  echo "Font packages installed"
+
+#kernel
+yay -S --noconfirm --needed linux-zen
+yay -S --noconfirm --needed linux-zen-headers
+
+  echo "Kernel packages installed"
+
+#grub update
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+  echo "Grub update complete"
+
 #yay-packages-install
 yay -S --noconfirm --needed arj acpi aarchup aconfmgr-git
   yay -S --noconfirm --needed betterdiscordctl-git
@@ -16,8 +37,8 @@ yay -S --noconfirm --needed arj acpi aarchup aconfmgr-git
         yay -S --noconfirm --needed firewalld ttf-hack
           yay -S --noconfirm --needed gotop github-desktop-bin
             yay -S --noconfirm --needed icedtea-web i3lock-next
-              yay -S --noconfirm --needed jre8-openjdk jre8-openjdk-headless jgmenu
-                yay -S --noconfirm --needed lib32-libevdev libcurl-openssl-1.0 linux-zen-headers
+              yay -S --noconfirm --needed jre8-openjdk jre8-openjdk-headless
+                yay -S --noconfirm --needed lib32-libevdev libcurl-openssl-1.0
                   yay -S --noconfirm --needed minitube
                   yay -S --noconfirm --needed nextcloud-client notify-osd ncurses5-compat-libs
                 yay -S --noconfirm --needed obs-v4l2sink
