@@ -48,7 +48,7 @@ yay -S --noconfirm --needed arj acpi aarchup aconfmgr-git atom arcolinux-meta-st
                     yay -S --noconfirm --needed lib32-libevdev libcurl-openssl-1.0 lutris lm_sensors lastpass
                       yay -S --noconfirm --needed materia-gtk-theme minecraft-launcher
                     yay -S --noconfirm --needed netflix-qdesktop nextcloud-client notify-osd ncurses5-compat-libs
-                  yay -S --noconfirm --needed obs-studio obs-v4l2sink oxy-neon
+                  yay -S --noconfirm --needed obs-studio obs-v4l2sink onboard oxy-neon
                 yay -S --noconfirm --needed papirus-icon-theme paprefs perl-anyevent-i3 polybar pkgcacheclean playonlinux privoxy
               yay -S --noconfirm --needed qt5-script qbittorrent
             yay -S --noconfirm --needed radiotray redshift remmina
