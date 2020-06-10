@@ -9,7 +9,7 @@
 set -e
 
 #system updates
-yay -Syu --noconfirm --needed
+yay -Syu
 
   echo "System updated"
 
