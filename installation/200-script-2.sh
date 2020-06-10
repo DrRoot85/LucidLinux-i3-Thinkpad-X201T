@@ -8,15 +8,15 @@
 #!/bin/bash
 set -e
 
+#system updates
+yay -Syu --noconfirm --needed
+
+  echo "System updated"
+
 #intel ucode
 yay -S --noconfirm --needed intel-ucode
 
   echo "Intel-ucode installed"
-
-#fonts
-yay -S --noconfirm --needed ttf-hack
-
-  echo "Font packages installed"
 
 #kernel
 yay -S --noconfirm --needed linux-zen
@@ -29,27 +29,35 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
   echo "Grub update complete"
 
-#yay-packages-install
-yay -S --noconfirm --needed arj acpi aarchup aconfmgr-git
-  yay -S --noconfirm --needed betterdiscordctl-git
-    yay -S --noconfirm --needed clipit
-      yay -S --noconfirm --needed evolution
-        yay -S --noconfirm --needed firewalld ttf-hack
-          yay -S --noconfirm --needed gotop github-desktop-bin
-            yay -S --noconfirm --needed icedtea-web i3lock-next
-              yay -S --noconfirm --needed jre8-openjdk jre8-openjdk-headless
-                yay -S --noconfirm --needed lib32-libevdev libcurl-openssl-1.0
-                  yay -S --noconfirm --needed minitube
-                  yay -S --noconfirm --needed nextcloud-client notify-osd ncurses5-compat-libs
-                yay -S --noconfirm --needed obs-v4l2sink
-              yay -S --noconfirm --needed paprefs perl-anyevent-i3 polybar pkgcacheclean picom-rounded-corners
-            yay -S --noconfirm --needed qt5-script qtwebflix-git
-          yay -S --noconfirm --needed redshift
-        yay -S --noconfirm --needed system-config-printer sharutils sl safeeyes
-      yay -S --noconfirm --needed tlp tlpui-git timeshift-autosnap tomboy-ng-bin
-    yay -S --noconfirm --needed unclutter uudeview
-  yay -S --noconfirm --needed v4l2loopback-dkms vpn-unlimited vysor-appimage
-yay -S --noconfirm --needed xautolock
+#fonts
+yay -S --noconfirm --needed ttf-hack
+
+  echo "Font packages installed"
+
+#yay packages install
+yay -S --noconfirm --needed arj acpi aarchup aconfmgr-git atom arcolinux-meta-steam
+  yay -S --noconfirm --needed betterdiscordctl-git bleachbit
+    yay -S --noconfirm --needed clipit catfish
+      yay -S --noconfirm --needed discord
+        yay -S --noconfirm --needed evolution etcher-bin
+          yay -S --noconfirm --needed firefox firefox-adblock-plus firefox-i18n-en-ca firewalld
+            yay -S --noconfirm --needed gotop github-desktop-bin guvcview google-earth-pro galculator guake
+              yay -S --noconfirm --needed hexchat hddtemp
+                yay -S --noconfirm --needed icedtea-web i3lock-next
+                  yay -S --noconfirm --needed jre8-openjdk jre8-openjdk-headless
+                    yay -S --noconfirm --needed lib32-libevdev libcurl-openssl-1.0 lutris lm_sensors lastpass
+                      yay -S --noconfirm --needed materia-gtk-theme minecraft-launcher
+                    yay -S --noconfirm --needed netflix-qdesktop nextcloud-client notify-osd ncurses5-compat-libs
+                  yay -S --noconfirm --needed obs-studio obs-v4l2sink oxy-neon
+                yay -S --noconfirm --needed papirus-icon-theme paprefs perl-anyevent-i3 polybar pkgcacheclean playonlinux privoxy
+              yay -S --noconfirm --needed qt5-script qbittorrent
+            yay -S --noconfirm --needed radiotray redshift remmina
+          yay -S --noconfirm --needed system-config-printer sharutils sl safeeyes spotify spotifywm-git screenkey
+        yay -S --noconfirm --needed telegram-desktop tlp tlpui-git timeshift-autosnap tomboy-ng-bin tor-browser tor
+      yay -S --noconfirm --needed unclutter uudeview
+    yay -S --noconfirm --needed v4l2loopback-dkms vpn-unlimited vysor-appimage vnstat
+  yay -S --noconfirm --needed xautolock
+yay -S --noconfirm --needed youtube-desktop
 
   echo "Yay packages installed"
 
