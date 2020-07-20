@@ -87,12 +87,16 @@ assign [class="Spotify|Pavucontrol"]                                            
 assign [class="discord"]                                                                              → 6
 assign [class="Hexchat|Riot|TelegramDesktop"]                                                         → 7
 assign [class="qtws"]                                                                                 → 8
-assign [class="Steam|lutris|playonlinux"]                                                             → 9
+assign [class="Steam|lutris|playonlinux|minecraft-launcher|Minecraft Linux Launcher UI"]              → 9
 assign [class="vysor|Tor Launcher|Tor Browser|VPN Unlimited"]                                         → 10
 
 #Floating or tiled
+for_window [class="guiscrcpy"] floating enable
+for_window [class="scrcpy"] floating enable
+for_window [class="reolink client.exe"] floating enable
+for_window [class="Minecraft Linux Launcher UI"] floating enable
 for_window [class="Galculator"] floating enable
-for_window [class="onboard"] floating enable
+for_window [class="onboard"] floating disable
 for_window [class="org.remmina.Remmina"] floating disable
 for_window [class="vysor"] floating enable
 for_window [class="Anydesk"] floating enable
@@ -109,7 +113,7 @@ for_window [class="Imagewriter"] floating enable
 for_window [class="clipit"] floating enable
 for_window [class="ffplay"] floating enable
 for_window [class="System-config-printer.py"] floating enable
-for_window [class="Termite"] floating enable
+for_window [class="Termite"] floating disable
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="Xfce4-taskmanager"] floating enable
 for_window [instance="script-fu"] border normal
