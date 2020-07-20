@@ -37,7 +37,7 @@ yay -S --noconfirm --needed ttf-hack
 #yay packages install
 yay -S --noconfirm --needed arj acpi aarchup aconfmgr-git atom arcolinux-meta-steam
   yay -S --noconfirm --needed betterdiscordctl-git bleachbit
-    yay -S --noconfirm --needed clipit catfish
+    yay -S --noconfirm --needed clipit catfish chromium-widevine
       yay -S --noconfirm --needed discord
         yay -S --noconfirm --needed evolution etcher-bin
           yay -S --noconfirm --needed firefox firefox-adblock-plus firefox-i18n-en-ca firewalld
@@ -46,20 +46,28 @@ yay -S --noconfirm --needed arj acpi aarchup aconfmgr-git atom arcolinux-meta-st
                 yay -S --noconfirm --needed icedtea-web i3lock-next
                   yay -S --noconfirm --needed jre8-openjdk jre8-openjdk-headless
                     yay -S --noconfirm --needed lib32-libevdev libcurl-openssl-1.0 lutris lm_sensors lastpass
-                      yay -S --noconfirm --needed materia-gtk-theme minecraft-launcher
-                    yay -S --noconfirm --needed netflix-qdesktop nextcloud-client notify-osd ncurses5-compat-libs
-                  yay -S --noconfirm --needed obs-studio obs-v4l2sink onboard oxy-neon
+                      yay -S --noconfirm --needed materia-gtk-theme minecraft-launcher mcpelauncher-hx-script
+                    yay -S --noconfirm --needed netflix-qdesktop nextcloud-client notify-osd ncurses5-compat-libs nvidia-dkms
+                  yay -S --noconfirm --needed obs-studio obs-v4l2sink onboard oxy-neon optimus-manager
                 yay -S --noconfirm --needed papirus-icon-theme paprefs perl-anyevent-i3 polybar pkgcacheclean playonlinux privoxy
               yay -S --noconfirm --needed qt5-script qbittorrent
             yay -S --noconfirm --needed radiotray redshift remmina
-          yay -S --noconfirm --needed system-config-printer sharutils sl safeeyes spotify spotifywm-git screenkey
+          yay -S --noconfirm --needed system-config-printer sharutils sl safeeyes spotify spotifywm-git screenkey scrcpy guiscrcpy
         yay -S --noconfirm --needed telegram-desktop tlp tlpui-git timeshift-autosnap tomboy-ng-bin tor-browser tor
       yay -S --noconfirm --needed unclutter uudeview
-    yay -S --noconfirm --needed v4l2loopback-dkms vpn-unlimited vysor-appimage vnstat
+    yay -S --noconfirm --needed v4l2loopback-dkms vpn-unlimited vnstat
   yay -S --noconfirm --needed xautolock
 yay -S --noconfirm --needed youtube-desktop
 
+
   echo "Yay packages installed"
+
+#yay package scripts
+
+betterdiscordctl install
+mcpelauncher-hx-script
+
+  echo "Yay package scipts installed"
 
 #user atom packages
 apm install --needed --noconfirm atom-beautify atom-ide-ui arc-ui autocomplete-html-entities
