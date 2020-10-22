@@ -73,8 +73,8 @@ module-margin-right = 1
 font-0 = "Hack:size=7.5;0"
 font-1 = "FontAwesome:size=7.5;0"
 
-modules-left =i3 filesystem
-modules-center =temperature1 temperature2 temperature3 temperature4 temperature5 temperature6 cpu1 memory1 battery load-average
+modules-left =appfinder filesystem temperature1 temperature2 temperature3
+modules-center =cpu1 memory1 battery load-average
 modules-right =pub-ip wired-network wireless-network
 
 ;tray-detached = false
@@ -125,9 +125,9 @@ module-margin-right = 1
 font-0 = "Hack:size=7.5;0"
 font-1 = "FontAwesome:size=7.5;0"
 
-modules-left =appfinder volume previous playpause next spotify
+modules-left =volume previous playpause next spotify
 modules-center =clock-calendar weather
-modules-right =onboard bluetooth redraw updates uptime
+modules-right =onboard bluetooth redraw updates
 
 ;tray-detached = false
 ;tray-offset-x = 0
@@ -308,7 +308,7 @@ format-unmounted-prefix-underline = #ff0000
 ;   %free%
 ;   %used%
 ; Default:%mountpoint% %percentage_free%%
-label-mounted = %fsname% %mountpoint% %free%
+label-mounted = %mountpoint% %free%
 label-mounted-underline = ${colors.underline}
 
 ; Available tokens:
@@ -369,43 +369,6 @@ thermal-zone = 0
 ; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
 ; to find path to desired file
 ; Default reverts to thermal zone setting
-hwmon-path = /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon3/temp1_input
-
-warn-temperature = 70
-format = <ramp> <label>
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-underline = ${colors.underline}
-format-warn = <ramp> <label-warn>
-format-warn-underline = #ff0000
-label = %temperature%
-label-warn =  %temperature%
-label-warn-foreground = #ff0000
-ramp-0 = ▁
-ramp-1 = ▂
-ramp-2 = ▃
-ramp-3 = ▄
-ramp-4 = ▅
-ramp-5 = ▆
-ramp-6 = ▇
-ramp-7 = █
-ramp-foreground = ${colors.prefix-foreground}
-
-################################################################################
-
-[module/temperature3]
-type = internal/temperature
-; Thermal zone to use
-; To list all the zone types, run
-; $ for i in /sys/class/thermal/thermal_zone*; do echo "$i: $(<$i/type)"; done
-; Default: 0
-thermal-zone = 0
-
-; Full path of temperature sysfs path
-; Use `sensors` to find preferred temperature source, then run
-; $ for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
-; to find path to desired file
-; Default reverts to thermal zone setting
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp2_input
 
 warn-temperature = 70
@@ -430,7 +393,7 @@ ramp-foreground = ${colors.prefix-foreground}
 
 ################################################################################
 
-[module/temperature4]
+[module/temperature3]
 type = internal/temperature
 ; Thermal zone to use
 ; To list all the zone types, run
@@ -808,7 +771,7 @@ format-packetloss = <animation-packetloss> <label-connected>
 ;   %linkspeed% [wired]
 
 ; Default: %ifname% %local_ip%
-label-connected =%essid%: %local_ip%
+label-connected =%local_ip%
 label-connected-foreground = ${colors.foreground}
 
 ; Default: (none)
@@ -994,19 +957,6 @@ type=custom/text
 content = "  "
 content-foreground=${colors.prefix-foreground}
 click-left = i3-msg 'restart'
-
-################################################################################
-
-[module/uptime]
-type = custom/script
-exec = uptime | awk -F, '{sub(".*up ",x,$1);print $1}'
-interval = 100
-label = Uptime:%output%
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = " "
-format-prefix-foreground = ${colors.prefix-foreground}
-format-underline = ${colors.underline}
 
 ################################################################################
 
