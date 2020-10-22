@@ -1,6 +1,6 @@
-# LucidLinux - I3 - Zen kernel - Nvidia
+# Lenovo Thinkpad X201 Tablet Project
+# LucidLinux - Xfce/I3 - Zen kernel - Fingerprint - Wacom/Pen - Simcard - {W.I.P}
 # Arcolinux Based - `https://arcolinux.com/`
-# This is an active repo with ongoing improvements, some things may not be complete but will become.
 
 ## Welcome to LucidLinux auto configuration script for ArcoLinux.
 ## Installing and configuring ArcoLinux to an awesome full range desktop well remaining minimal has never been easier!
@@ -9,8 +9,10 @@
 ## Prerequisites
 
 - A working Internet connection
-- The i3 ISO is used and recommended `https://sourceforge.net/projects/arcolinux-community-editions/files/i3/`
-- Configure Pamac manager and enable AUR/Updates if not already
+- A fresh Arco Linux installation `https://sourceforge.net/projects/arcolinux-community-editions/files/`
+- The Xfce minimal ISO is recommended `https://sourceforge.net/projects/arcolinux-community-editions/files/xfce/`
+- The I3 ISO is not recommended for this version as it includes I3 in the script.
+- Configure Pamac manager to enable AUR/Updates
 - Fully updated/rebooted system
 
 ## How to get it with git
