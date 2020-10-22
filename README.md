@@ -1,4 +1,4 @@
-# Lenovo Thinkpad X201 Tablet Project - {W.I.P}
+# Thinkpad X201 Tablet Project - {W.I.P}
 # LucidLinux - I3 - Zen kernel - Fingerprint - Wacom/Pen - Simcard
 # Arcolinux Based - `https://arcolinux.com/`
 
