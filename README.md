@@ -15,12 +15,12 @@
 - get the script: `git clone git://github.com/xbc4000/LucidLinux-i3 for Thinkpad X201T`
 
 ## How to use
-- Extract the Lucid Linux folder and open.
-- Make sure to allow all the scripts to be run as a program first.
-- Open terminal in the Lucid Linux folder.
+- Extract the Lucid Linux folder.
+- Make sure to mark all files as executable.
+- Open terminal in the Lucid Linux installation folder.
 - Run `./000-run-install-script.sh` from the terminal.
 - Give sudo password you made in the installation of Arco Linux.
-- Sit back and watch the magic
+- Sit back and watch the magic.
 - When the script is all done and reboots your system, your ready to go!
-- Enjoy your new Arch Linux setup and customize it as you wish.
-- Don't hesitate to modify the script after with your custom configurations for an even easier installation next time around.
+- Enjoy your new Arco Linux setup and customize it as you wish.
+- Don't hesitate to modify the script with your custom configurations for an even easier installation next time around.
