@@ -114,7 +114,6 @@ for_window [window_role="setup"] floating enable
 #Startup Applications
 exec --no-startup-id thunar
 exec --no-startup-id tint2
-exec --no-startup-id obs
 exec --no-startup-id chromium
 exec --no-startup-id spotify
 exec --no-startup-id discord
