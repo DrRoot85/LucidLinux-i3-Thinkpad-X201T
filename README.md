@@ -12,7 +12,7 @@
 - A fresh i3 ISO `https://sourceforge.net/projects/arcolinux-community-editions/files/i3/`
 
 ## How to get it with git
-- get the script: `git clone git://github.com/xbc4000/LucidLinux-i3-for-thinkpad-x201t`
+- get the script: `git clone git://github.com/xbc4000/LucidLinux-i3-For-Thinkpad-X201T`
 
 ## How to use
 - Extract the Lucid Linux folder.
