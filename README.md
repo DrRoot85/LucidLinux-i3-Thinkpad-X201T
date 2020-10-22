@@ -1,5 +1,5 @@
-# Thinkpad X201 Tablet Project - {W.I.P}
-# LucidLinux - I3 - Zen kernel - Fingerprint - Wacom/Pen - Simcard
+# Thinkpad X201T Project - {W.I.P}
+# LucidLinux - I3 - Zen kernel - ACPI - TabletMode/AutoSwivel - Fingerprint - Wacom/Pen - Simcard ....
 # Arcolinux Based - `https://arcolinux.com/`
 
 ## Welcome to LucidLinux auto configuration and setup script for ArcoLinux.
