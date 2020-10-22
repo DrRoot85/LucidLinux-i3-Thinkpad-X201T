@@ -1,4 +1,5 @@
 # Thinkpad X201T Project - {W.I.P}
+# This is an active repo with ongoing improvements, some things may not be complete but will become.
 # LucidLinux - I3 - Zen kernel - ACPI/TLP - FanControl - TabletMode/AutoSwivel - Fingerprint - Wacom/Pen - Simcard ....
 # Arcolinux Based - `https://arcolinux.com/`
 
