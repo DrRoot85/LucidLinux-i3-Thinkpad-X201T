@@ -73,7 +73,7 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 assign [class="code-oss"]                                                               → 1
 assign [class="Thunar"]                                                                 → 2
 assign [class="GitHub Desktop"]                                                         → 3
-assign [class="chromium"]                                                               → 4
+assign [class="Chromium"]                                                               → 4
 assign [class="Spotify|Pavucontrol"]                                                    → 5
 assign [class="discord"]                                                                → 6
 assign [class="Hexchat|TelegramDesktop"]                                                → 7
