@@ -79,18 +79,20 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 #you can find the class with the program xprop
 
 # Monitor
-assign [class="Atom"]                                                                                 → 1
+assign [class="code-oss"]                                                                             → 1
 assign [class="Thunar|GitHub Desktop"]                                                                → 2
 assign [class="obs|Guvcview"]                                                                         → 3
-assign [class="firefox"]                                                                              → 4
+assign [class="Naver-whale"]                                                                          → 4
 assign [class="Spotify|Pavucontrol"]                                                                  → 5
 assign [class="discord"]                                                                              → 6
 assign [class="Hexchat|Riot|TelegramDesktop"]                                                         → 7
 assign [class="qtws"]                                                                                 → 8
-assign [class="Steam|lutris|playonlinux|minecraft-launcher|Minecraft Linux Launcher UI"]              → 9
+assign [class="Steam|Electron"]                                                                       → 9
 assign [class="vysor|Tor Launcher|Tor Browser|VPN Unlimited"]                                         → 10
 
 #Floating or tiled
+for_window [class="Barrier"] floating disable
+for_window [class="tint2"] floating disable
 for_window [class="guiscrcpy"] floating enable
 for_window [class="scrcpy"] floating enable
 for_window [class="reolink client.exe"] floating enable
@@ -127,8 +129,10 @@ for_window [window_role="setup"] floating enable
 
 #Execute
 #Startup Applications
+exec --no-startup-id thunar
+exec --no-startup-id tint2
 exec --no-startup-id obs
-exec --no-startup-id firefox
+exec --no-startup-id naver-whale-stable
 exec --no-startup-id spotify
 exec --no-startup-id discord
 exec --no-startup-id telegram-desktop
@@ -139,6 +143,9 @@ exec --no-startup-id setxkbmap us
 exec --no-startup-id nitrogen --restore
 
 #Tray Applications
+exec --no-startup-id aarchup
+exec --no-startup-id code-oss
+exec --no-startup-id steam
 exec --no-startup-id compton
 exec --no-startup-id onboard
 exec --no-startup-id bluberry
@@ -153,10 +160,11 @@ exec --no-startup-id tp-battery-icon
 exec --no-startup-id xfce4-power-manager
 
 #Background Applications
+exec_always --no-startup-id ~/shapez.io/play.sh
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id ~/.config/polybar/launch.sh &amp;
 exec_always --no-startup-id ~/.config/polybar/scripts/launchlistener.sh
-exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
+exec_always --no-startup-id compton --config ~/.config/i3/picom.conf
 exec_always --no-startup-id xautolock -time 1 -locker i3lock-next "Security Clearence Required" "hack" 24
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
@@ -207,25 +215,7 @@ bindsym XF86AudioPrev exec --no-startup-id "dbus-send --print-reply --dest=org.m
 bindsym XF86AudioStop exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
 
 #Power Menu#
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
-#Press $mod (super) and X to exit - check toolbar for next choices
-bindsym $mod+X mode "$mode_system"
-
-set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
-mode "$mode_system" {
-      bindsym k exec --no-startup-id ~/.config/i3/scripts/i3exit.sh lock, mode "default"
-      bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
-      bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
-      bindsym h exec --no-startup-id ~/.config/i3/scripts/i3exit.sh hibernate, mode "default"
-      bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
-      bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
+bindsym $mod+X exec --no-startup-id arcolinux-logout
 
 #Moving around i3
 #use Mouse+$mod to drag floating windows to their wanted position

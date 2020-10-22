@@ -1,5 +1,5 @@
 ############################################################################################################################
-# Core unlock, Speedtest, Reflector, Git config
+# Core unlock, Reflector, Git config
 # Author   	: 	xbc4000
 # Website 	: 	github.com/xbc4000
 # Written to be used on 64 bits computers
@@ -48,6 +48,20 @@ case $numberofcores in
 esac
   echo "All cores will be used during building and compression"
 
+# installing reflector to test which servers are fastest
+sudo pacman -S --noconfirm --needed reflector
+
+echo "finding fastest servers please stand by"
+
+# finding the fastest archlinux servers
+sudo reflector -l 100 -f 50 --sort rate --threads 5 --verbose --save /tmp/mirrorlist.new && rankmirrors -n 0 /tmp/mirrorlist.new > /tmp/mirrorlist && sudo cp /tmp/mirrorlist /etc/pacman.d
+
+echo "fastest servers saved"
+cat /etc/pacman.d/mirrorlist
+sudo pacman -Syu
+
+echo "mirrorlist update complete"
+
 #https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config
 sudo pacman -S --noconfirm --needed git
   git init
@@ -58,4 +72,3 @@ sudo pacman -S --noconfirm --needed git
     git config --global credential.helper 'cache --timeout=18000'
   git config --global push.default simple
 echo "Git installed"
-

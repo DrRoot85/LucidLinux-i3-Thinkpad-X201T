@@ -1,12 +1,9 @@
 #!/bin/sh
-lock() {
-    #i3lock -i ~/.config/i3/scripts/lockscreen/lockscreen.png -t
-    i3lock-next "Security Clearence Required" "hack" 24
-}
+
 
 case "$1" in
     lock)
-        lock
+        betterlockscreen -l dimblur -- --timestr="%H:%M"
         ;;
     logout)
         i3-msg exit

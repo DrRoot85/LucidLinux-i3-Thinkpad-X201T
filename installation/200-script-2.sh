@@ -9,7 +9,7 @@
 set -e
 
 #system updates
-yay -Syu
+yay -Syu --noconfirm --needed
 
   echo "System updated"
 
@@ -35,39 +35,40 @@ yay -S --noconfirm --needed ttf-hack
   echo "Font packages installed"
 
 #yay packages install
-yay -S --noconfirm --needed arj acpi aarchup aconfmgr-git arcolinux-meta-steam
-  yay -S --noconfirm --needed betterdiscordctl-git bleachbit
-    yay -S --noconfirm --needed clipit catfish code
+yay -S --noconfirm --needed arj acpi aarchup aconfmgr-git alpm_octopi_utils
+  yay -S --noconfirm --needed barrier barrier-headless betterdiscordctl-git bleachbit
+    yay -S --noconfirm --needed clipit catfish code chromium chromium-widevine
       yay -S --noconfirm --needed discord
         yay -S --noconfirm --needed evolution etcher-bin
-          yay -S --noconfirm --needed firewalld
-            yay -S --noconfirm --needed gotop github-desktop-bin guvcview google-earth-pro galculator guake
+          yay -S --noconfirm --needed fprintd fingerprint-gui fancontrol-gui
+            yay -S --noconfirm --needed gotop github-desktop-bin google-earth-pro galculator guake
               yay -S --noconfirm --needed hexchat hddtemp
-                yay -S --noconfirm --needed icedtea-web i3lock-next
-                  yay -S --noconfirm --needed jre8-openjdk jre8-openjdk-headless
-                    yay -S --noconfirm --needed lib32-libevdev lutris lm_sensors lastpass
-                      yay -S --noconfirm --needed materia-gtk-theme minecraft-launcher mcpelauncher-hx-script
-                      yay -S --noconfirm --needed netflix-qdesktop notify-osd nvidia-vulkan-dkms
-                    yay -S --noconfirm --needed obs-studio obs-v4l2sink onboard oxy-neon optimus-manager
-                  yay -S --noconfirm --needed papirus-icon-theme paprefs perl-anyevent-i3 polybar playonlinux privoxy
-                yay -S --noconfirm --needed qt5-script qbittorrent
-              yay -S --noconfirm --needed radiotray redshift
-            yay -S --noconfirm --needed sharutils sl safeeyes spotify spotifywm-git scrcpy guiscrcpy
-          yay -S --noconfirm --needed telegram-desktop tlp tlpui-git tomboy-ng-bin tor-browser tor
-        yay -S --noconfirm --needed unclutter uudeview
-      yay -S --noconfirm --needed v4l2loopback-dkms vpn-unlimited vnstat
-    yay -S --noconfirm --needed whale-browser
-  yay -S --noconfirm --needed xautolock
+                yay -S --noconfirm --needed inxi input-wacom-dkms
+                  yay -S --noconfirm --needed lm_sensors libfprint lsb-release libreoffice-still lib32-libevdev libwacom
+                    yay -S --noconfirm --needed materia-gtk-theme microsoft-edge-dev
+                    yay -S --noconfirm --needed netflix-qdesktop notify-osd npm
+                  yay -S --noconfirm --needed onboard octopi octopi-notifier-qt5
+                yay -S --noconfirm --needed pacaur pikaur paprefs pepper-flash perl-anyevent-i3 polybar privoxy
+              yay -S --noconfirm --needed qbittorrent
+            yay -S --noconfirm --needed radiotray redshift
+          yay -S --noconfirm --needed sharutils sl safeeyes spotify spotifywm-git
+        yay -S --noconfirm --needed telegram-desktop tp_smapi thinkfan tlp tlpui-git tomboy-ng-bin tor-browser tk tor tint2
+      yay -S --noconfirm --needed unclutter uudeview
+    yay -S --noconfirm --needed vpn-unlimited vnstat
+  yay -S --noconfirm --needed xf86-input-wacom
 yay -S --noconfirm --needed youtube-desktop
 
   echo "Yay packages installed"
 
-#yay package scripts
+modprobe thinkpad_acpi
+cat /proc/acpi/ibm/fan
 
-betterdiscordctl install
-mcpelauncher-hx-script
+  echo "Modules enabled"
 
-  echo "Yay package scipts installed"
+sudo systemctl enable thinkfan.service
+sudo systmectl start thinkfan.service
+
+  echo "Thinkfan enabled"
 
 sudo systemctl enable tlp.service
   sudo systemctl mask systemd-rfkill.service
