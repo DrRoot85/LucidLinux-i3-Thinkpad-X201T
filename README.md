@@ -24,3 +24,4 @@
 - When the script is all done and reboots your system, your ready to go!
 - Enjoy your new Arco Linux setup and customize it as you wish.
 - Don't hesitate to modify the script with your custom configurations for an even easier installation next time around.
+
