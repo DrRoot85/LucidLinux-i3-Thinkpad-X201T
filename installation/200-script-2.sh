@@ -47,7 +47,7 @@ yay -S --noconfirm --needed arj acpi aarchup aconfmgr-git alpm_octopi_utils
                   yay -S --noconfirm --needed lm_sensors libfprint lsb-release libreoffice-still lib32-libevdev libwacom
                     yay -S --noconfirm --needed materia-gtk-theme microsoft-edge-dev
                     yay -S --noconfirm --needed netflix-qdesktop notify-osd npm
-                  yay -S --noconfirm --needed onboard octopi octopi-notifier-qt5
+                  yay -S --noconfirm --needed onboard pod2man octopi octopi-notifier-qt5
                 yay -S --noconfirm --needed pacaur pikaur paprefs pepper-flash perl-anyevent-i3 polybar privoxy
               yay -S --noconfirm --needed qbittorrent
             yay -S --noconfirm --needed radiotray redshift
@@ -66,7 +66,8 @@ cat /proc/acpi/ibm/fan
   echo "Modules enabled"
 
 sudo systemctl enable thinkfan.service
-sudo systmectl start thinkfan.service
+sudo systemctl start thinkfan.service
+echo level full_speed > /proc/acpi/ibm/fan
 
   echo "Thinkfan enabled"
 

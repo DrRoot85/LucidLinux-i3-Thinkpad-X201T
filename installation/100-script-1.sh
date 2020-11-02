@@ -58,6 +58,6 @@ sudo reflector -l 100 -f 50 --sort rate --threads 5 --verbose --save /tmp/mirror
 
 echo "fastest servers saved"
 cat /etc/pacman.d/mirrorlist
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm --needed
 
 echo "mirrorlist update complete"
